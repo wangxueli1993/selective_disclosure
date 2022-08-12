@@ -13,4 +13,5 @@ members = [
     "solution/selective_certificate_disclosure",
     "solution/verifiable_confidential_ledger",
     "solution/anonymous_ciphertext_voting",
+    "server",
 ]
