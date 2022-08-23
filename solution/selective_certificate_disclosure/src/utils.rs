@@ -3,7 +3,7 @@
 //! Library of SCD utility functions.
 
 use wedpr_l_utils::error::WedprError;
-use wedpr_s_protos::generated::scd::CertificateSchema;
+use crate::scd::CertificateSchema;
 extern crate serde;
 extern crate serde_json;
 use wedpr_indy_crypto::{

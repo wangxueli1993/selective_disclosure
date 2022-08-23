@@ -404,7 +404,7 @@ impl CertificateTemplate {
         ::std::default::Default::default()
     }
 
-    // .com.webank.wedpr.scd.proto.CertificateSchema certificate_schema = 1;
+    // .scd.CertificateSchema certificate_schema = 1;
 
 
     pub fn get_certificate_schema(&self) -> &CertificateSchema {
@@ -463,7 +463,7 @@ impl CertificateTemplate {
         ::std::mem::replace(&mut self.template_correctness_proof, ::std::string::String::new())
     }
 
-    // .com.webank.wedpr.scd.proto.TemplatePublicKey template_public_key = 3;
+    // .scd.TemplatePublicKey template_public_key = 3;
 
 
     pub fn get_template_public_key(&self) -> &TemplatePublicKey {
@@ -993,7 +993,7 @@ impl AttributeDict {
         ::std::default::Default::default()
     }
 
-    // repeated .com.webank.wedpr.scd.proto.StringToStringPair pair = 1;
+    // repeated .scd.StringToStringPair pair = 1;
 
 
     pub fn get_pair(&self) -> &[StringToStringPair] {
@@ -1823,7 +1823,7 @@ impl VerificationRuleSet {
         ::std::mem::replace(&mut self.revealed_attribute_name, ::protobuf::RepeatedField::new())
     }
 
-    // repeated .com.webank.wedpr.scd.proto.Predicate attribute_predicate = 2;
+    // repeated .scd.Predicate attribute_predicate = 2;
 
 
     pub fn get_attribute_predicate(&self) -> &[Predicate] {
@@ -2006,7 +2006,7 @@ impl SignCertificateRequest {
         ::std::default::Default::default()
     }
 
-    // .com.webank.wedpr.scd.proto.AttributeDict certificate_attribute_dict = 1;
+    // .scd.AttributeDict certificate_attribute_dict = 1;
 
 
     pub fn get_certificate_attribute_dict(&self) -> &AttributeDict {
@@ -2264,7 +2264,7 @@ impl VerifyRequest {
         ::std::default::Default::default()
     }
 
-    // .com.webank.wedpr.scd.proto.CertificateTemplate certificate_template = 1;
+    // .scd.CertificateTemplate certificate_template = 1;
 
 
     pub fn get_certificate_template(&self) -> &CertificateTemplate {
@@ -2531,7 +2531,7 @@ impl ScdResult {
         ::std::default::Default::default()
     }
 
-    // .com.webank.wedpr.scd.proto.CertificateTemplate certificate_template = 1;
+    // .scd.CertificateTemplate certificate_template = 1;
 
 
     pub fn get_certificate_template(&self) -> &CertificateTemplate {
@@ -2564,7 +2564,7 @@ impl ScdResult {
         self.certificate_template.take().unwrap_or_else(|| CertificateTemplate::new())
     }
 
-    // .com.webank.wedpr.scd.proto.TemplatePrivateKey template_private_key = 2;
+    // .scd.TemplatePrivateKey template_private_key = 2;
 
 
     pub fn get_template_private_key(&self) -> &TemplatePrivateKey {
@@ -2623,7 +2623,7 @@ impl ScdResult {
         ::std::mem::replace(&mut self.issuer_nonce, ::std::string::String::new())
     }
 
-    // .com.webank.wedpr.scd.proto.CertificateSignature certificate_signature = 4;
+    // .scd.CertificateSignature certificate_signature = 4;
 
 
     pub fn get_certificate_signature(&self) -> &CertificateSignature {
@@ -2682,7 +2682,7 @@ impl ScdResult {
         ::std::mem::replace(&mut self.user_nonce, ::std::string::String::new())
     }
 
-    // .com.webank.wedpr.scd.proto.SignCertificateRequest sign_certificate_request = 6;
+    // .scd.SignCertificateRequest sign_certificate_request = 6;
 
 
     pub fn get_sign_certificate_request(&self) -> &SignCertificateRequest {
@@ -2793,7 +2793,7 @@ impl ScdResult {
         ::std::mem::replace(&mut self.verification_nonce, ::std::string::String::new())
     }
 
-    // .com.webank.wedpr.scd.proto.VerifyRequest verify_request = 10;
+    // .scd.VerifyRequest verify_request = 10;
 
 
     pub fn get_verify_request(&self) -> &VerifyRequest {
@@ -2826,7 +2826,7 @@ impl ScdResult {
         self.verify_request.take().unwrap_or_else(|| VerifyRequest::new())
     }
 
-    // .com.webank.wedpr.scd.proto.AttributeDict revealed_attribute_dict = 11;
+    // .scd.AttributeDict revealed_attribute_dict = 11;
 
 
     pub fn get_revealed_attribute_dict(&self) -> &AttributeDict {
@@ -3205,62 +3205,55 @@ impl ::protobuf::reflect::ProtobufValue for ScdResult {
 }
 
 static file_descriptor_proto_data: &'static [u8] = b"\
-    \n\x16solution/scd/scd.proto\x12\x1acom.webank.wedpr.scd.proto\":\n\x11C\
-    ertificateSchema\x12%\n\x0eattribute_name\x18\x01\x20\x03(\tR\rattribute\
-    Name\"<\n\x12StringToStringPair\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03\
-    key\x12\x14\n\x05value\x18\x02\x20\x01(\tR\x05value\"\x90\x02\n\x13Certi\
-    ficateTemplate\x12\\\n\x12certificate_schema\x18\x01\x20\x01(\x0b2-.com.\
-    webank.wedpr.scd.proto.CertificateSchemaR\x11certificateSchema\x12<\n\
-    \x1atemplate_correctness_proof\x18\x02\x20\x01(\tR\x18templateCorrectnes\
-    sProof\x12]\n\x13template_public_key\x18\x03\x20\x01(\x0b2-.com.webank.w\
-    edpr.scd.proto.TemplatePublicKeyR\x11templatePublicKey\"%\n\x11TemplateP\
-    ublicKey\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\"&\n\x12TemplatePri\
-    vateKey\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\"S\n\rAttributeDict\
-    \x12B\n\x04pair\x18\x01\x20\x03(\x0b2..com.webank.wedpr.scd.proto.String\
-    ToStringPairR\x04pair\"\xbc\x01\n\x18BlindedCertificateSecret\x12>\n\x1b\
-    blinded_certificate_secrets\x18\x01\x20\x01(\tR\x19blindedCertificateSec\
-    rets\x12`\n-blinded_certificate_secrets_correctness_proof\x18\x02\x20\
-    \x01(\tR)blindedCertificateSecretsCorrectnessProof\"\x8b\x01\n\x14Certif\
-    icateSignature\x123\n\x15certificate_signature\x18\x01\x20\x01(\tR\x14ce\
-    rtificateSignature\x12>\n\x1bsignature_correctness_proof\x18\x02\x20\x01\
-    (\tR\x19signatureCorrectnessProof\"\x82\x01\n\tPredicate\x12%\n\x0eattri\
-    bute_name\x18\x01\x20\x01(\tR\rattributeName\x12%\n\x0epredicate_type\
-    \x18\x02\x20\x01(\tR\rpredicateType\x12'\n\x0fpredicate_value\x18\x03\
-    \x20\x01(\x04R\x0epredicateValue\"\xa5\x01\n\x13VerificationRuleSet\x126\
-    \n\x17revealed_attribute_name\x18\x01\x20\x03(\tR\x15revealedAttributeNa\
-    me\x12V\n\x13attribute_predicate\x18\x02\x20\x03(\x0b2%.com.webank.wedpr\
-    .scd.proto.PredicateR\x12attributePredicate\"\xa3\x02\n\x16SignCertifica\
-    teRequest\x12g\n\x1acertificate_attribute_dict\x18\x01\x20\x01(\x0b2).co\
-    m.webank.wedpr.scd.proto.AttributeDictR\x18certificateAttributeDict\x12>\
-    \n\x1bblinded_certificate_secrets\x18\x02\x20\x01(\tR\x19blindedCertific\
-    ateSecrets\x12`\n-blinded_certificate_secrets_correctness_proof\x18\x03\
-    \x20\x01(\tR)blindedCertificateSecretsCorrectnessProof\"\xd1\x01\n\rVeri\
-    fyRequest\x12b\n\x14certificate_template\x18\x01\x20\x01(\x0b2/.com.weba\
-    nk.wedpr.scd.proto.CertificateTemplateR\x13certificateTemplate\x12-\n\
-    \x12verification_proof\x18\x02\x20\x01(\tR\x11verificationProof\x12-\n\
-    \x12verification_nonce\x18\x03\x20\x01(\tR\x11verificationNonce\"\xe8\
-    \x06\n\tScdResult\x12b\n\x14certificate_template\x18\x01\x20\x01(\x0b2/.\
-    com.webank.wedpr.scd.proto.CertificateTemplateR\x13certificateTemplate\
-    \x12`\n\x14template_private_key\x18\x02\x20\x01(\x0b2..com.webank.wedpr.\
-    scd.proto.TemplatePrivateKeyR\x12templatePrivateKey\x12!\n\x0cissuer_non\
-    ce\x18\x03\x20\x01(\tR\x0bissuerNonce\x12e\n\x15certificate_signature\
-    \x18\x04\x20\x01(\x0b20.com.webank.wedpr.scd.proto.CertificateSignatureR\
-    \x14certificateSignature\x12\x1d\n\nuser_nonce\x18\x05\x20\x01(\tR\tuser\
-    Nonce\x12l\n\x18sign_certificate_request\x18\x06\x20\x01(\x0b22.com.weba\
-    nk.wedpr.scd.proto.SignCertificateRequestR\x16signCertificateRequest\x12\
-    (\n\x10user_private_key\x18\x07\x20\x01(\tR\x0euserPrivateKey\x12O\n$cer\
-    tificate_secrets_blinding_factors\x18\x08\x20\x01(\tR!certificateSecrets\
-    BlindingFactors\x12-\n\x12verification_nonce\x18\t\x20\x01(\tR\x11verifi\
-    cationNonce\x12P\n\x0everify_request\x18\n\x20\x01(\x0b2).com.webank.wed\
-    pr.scd.proto.VerifyRequestR\rverifyRequest\x12a\n\x17revealed_attribute_\
-    dict\x18\x0b\x20\x01(\x0b2).com.webank.wedpr.scd.proto.AttributeDictR\
-    \x15revealedAttributeDict\x12\x1f\n\x0bbool_result\x18\x0c\x20\x01(\x08R\
-    \nboolResult2\x80\x02\n\x13SelectiveDisclosure\x12p\n\x0eCreateTemplate\
-    \x12-.com.webank.wedpr.scd.proto.CertificateSchema\x1a/.com.webank.wedpr\
-    .scd.proto.CertificateTemplate\x12w\n\x0fSignCertificate\x122.com.webank\
-    .wedpr.scd.proto.SignCertificateRequest\x1a0.com.webank.wedpr.scd.proto.\
-    CertificateSignatureB\x1e\n\x1acom.webank.wedpr.scd.protoP\x01b\x06proto\
-    3\
+    \n\x16solution/scd/scd.proto\x12\x03scd\":\n\x11CertificateSchema\x12%\n\
+    \x0eattribute_name\x18\x01\x20\x03(\tR\rattributeName\"<\n\x12StringToSt\
+    ringPair\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\x12\x14\n\x05value\
+    \x18\x02\x20\x01(\tR\x05value\"\xe2\x01\n\x13CertificateTemplate\x12E\n\
+    \x12certificate_schema\x18\x01\x20\x01(\x0b2\x16.scd.CertificateSchemaR\
+    \x11certificateSchema\x12<\n\x1atemplate_correctness_proof\x18\x02\x20\
+    \x01(\tR\x18templateCorrectnessProof\x12F\n\x13template_public_key\x18\
+    \x03\x20\x01(\x0b2\x16.scd.TemplatePublicKeyR\x11templatePublicKey\"%\n\
+    \x11TemplatePublicKey\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\"&\n\
+    \x12TemplatePrivateKey\x12\x10\n\x03key\x18\x01\x20\x01(\tR\x03key\"<\n\
+    \rAttributeDict\x12+\n\x04pair\x18\x01\x20\x03(\x0b2\x17.scd.StringToStr\
+    ingPairR\x04pair\"\xbc\x01\n\x18BlindedCertificateSecret\x12>\n\x1bblind\
+    ed_certificate_secrets\x18\x01\x20\x01(\tR\x19blindedCertificateSecrets\
+    \x12`\n-blinded_certificate_secrets_correctness_proof\x18\x02\x20\x01(\t\
+    R)blindedCertificateSecretsCorrectnessProof\"\x8b\x01\n\x14CertificateSi\
+    gnature\x123\n\x15certificate_signature\x18\x01\x20\x01(\tR\x14certifica\
+    teSignature\x12>\n\x1bsignature_correctness_proof\x18\x02\x20\x01(\tR\
+    \x19signatureCorrectnessProof\"\x82\x01\n\tPredicate\x12%\n\x0eattribute\
+    _name\x18\x01\x20\x01(\tR\rattributeName\x12%\n\x0epredicate_type\x18\
+    \x02\x20\x01(\tR\rpredicateType\x12'\n\x0fpredicate_value\x18\x03\x20\
+    \x01(\x04R\x0epredicateValue\"\x8e\x01\n\x13VerificationRuleSet\x126\n\
+    \x17revealed_attribute_name\x18\x01\x20\x03(\tR\x15revealedAttributeName\
+    \x12?\n\x13attribute_predicate\x18\x02\x20\x03(\x0b2\x0e.scd.PredicateR\
+    \x12attributePredicate\"\x8c\x02\n\x16SignCertificateRequest\x12P\n\x1ac\
+    ertificate_attribute_dict\x18\x01\x20\x01(\x0b2\x12.scd.AttributeDictR\
+    \x18certificateAttributeDict\x12>\n\x1bblinded_certificate_secrets\x18\
+    \x02\x20\x01(\tR\x19blindedCertificateSecrets\x12`\n-blinded_certificate\
+    _secrets_correctness_proof\x18\x03\x20\x01(\tR)blindedCertificateSecrets\
+    CorrectnessProof\"\xba\x01\n\rVerifyRequest\x12K\n\x14certificate_templa\
+    te\x18\x01\x20\x01(\x0b2\x18.scd.CertificateTemplateR\x13certificateTemp\
+    late\x12-\n\x12verification_proof\x18\x02\x20\x01(\tR\x11verificationPro\
+    of\x12-\n\x12verification_nonce\x18\x03\x20\x01(\tR\x11verificationNonce\
+    \"\xde\x05\n\tScdResult\x12K\n\x14certificate_template\x18\x01\x20\x01(\
+    \x0b2\x18.scd.CertificateTemplateR\x13certificateTemplate\x12I\n\x14temp\
+    late_private_key\x18\x02\x20\x01(\x0b2\x17.scd.TemplatePrivateKeyR\x12te\
+    mplatePrivateKey\x12!\n\x0cissuer_nonce\x18\x03\x20\x01(\tR\x0bissuerNon\
+    ce\x12N\n\x15certificate_signature\x18\x04\x20\x01(\x0b2\x19.scd.Certifi\
+    cateSignatureR\x14certificateSignature\x12\x1d\n\nuser_nonce\x18\x05\x20\
+    \x01(\tR\tuserNonce\x12U\n\x18sign_certificate_request\x18\x06\x20\x01(\
+    \x0b2\x1b.scd.SignCertificateRequestR\x16signCertificateRequest\x12(\n\
+    \x10user_private_key\x18\x07\x20\x01(\tR\x0euserPrivateKey\x12O\n$certif\
+    icate_secrets_blinding_factors\x18\x08\x20\x01(\tR!certificateSecretsBli\
+    ndingFactors\x12-\n\x12verification_nonce\x18\t\x20\x01(\tR\x11verificat\
+    ionNonce\x129\n\x0everify_request\x18\n\x20\x01(\x0b2\x12.scd.VerifyRequ\
+    estR\rverifyRequest\x12J\n\x17revealed_attribute_dict\x18\x0b\x20\x01(\
+    \x0b2\x12.scd.AttributeDictR\x15revealedAttributeDict\x12\x1f\n\x0bbool_\
+    result\x18\x0c\x20\x01(\x08R\nboolResult2Y\n\x13SelectiveDisclosure\x12B\
+    \n\x0eCreateTemplate\x12\x16.scd.CertificateSchema\x1a\x18.scd.Certifica\
+    teTemplateB\x1e\n\x1acom.webank.wedpr.scd.protoP\x01b\x06proto3\
 ";
 
 static file_descriptor_proto_lazy: ::protobuf::rt::LazyV2<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::rt::LazyV2::INIT;

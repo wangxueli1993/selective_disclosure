@@ -6,9 +6,10 @@
 extern crate wedpr_l_macros;
 
 pub mod issuer;
-pub mod user;
+//pub mod user;
 pub mod utils;
-pub mod verifier;
+//pub mod verifier;
+pub mod scd;
 
 // TODO: Add E2E tests for all SCD functions.
 // TODO: Add benches for all SCD functions.

@@ -2,13 +2,12 @@
 
 syntax = "proto3";
 
-package com.webank.wedpr.scd.proto;
+package scd;
 option java_package = "com.webank.wedpr.scd.proto";
 option java_multiple_files = true;
 
 service SelectiveDisclosure {
   rpc CreateTemplate (CertificateSchema) returns (CertificateTemplate);
-  rpc SignCertificate (SignCertificateRequest) returns (CertificateSignature);
 }
 
 // Certificate schema.

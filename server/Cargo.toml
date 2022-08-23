@@ -1,0 +1,18 @@
+[package]
+name = "selective_disclosure"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+tonic = "0.8.0"
+prost = "0.11"
+tokio = { version = "1.20.1", features = ["rt-multi-thread","macros"] }
+wedpr_s_protos = { path = "../protos" }
+wedpr_s_selective_certificate_disclosure = { path = "../solution/selective_certificate_disclosure" }
+
+[build-dependencies]
+tonic-build = "0.8"
+
+[[bin]]
+name = "scd-server"
+path = "src/server.rs"

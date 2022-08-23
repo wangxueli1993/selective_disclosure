@@ -11,3 +11,5 @@ description = "Library of WeDPR protobuf definitions and their generated code."
 [dependencies]
 protobuf = "2.22.1"
 protoc-rust = "2.22.1"
+tonic = "0.8.0"
+prost = "0.11"

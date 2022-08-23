@@ -5,10 +5,8 @@
 use crate::utils;
 use wedpr_indy_crypto::cl::{issuer, Nonce};
 use wedpr_l_utils::error::WedprError;
-use wedpr_s_protos::generated::scd::{
-    CertificateSchema, CertificateSignature, CertificateTemplate,
-    SignCertificateRequest, TemplatePrivateKey, TemplatePublicKey,
-};
+use crate::scd::{CertificateSchema, CertificateSignature, CertificateTemplate,
+    SignCertificateRequest, TemplatePrivateKey, TemplatePublicKey,};
 
 /// Makes a certificate template for users to fill data.
 // TODO: Wrap the output as PB if necessary.
